@@ -24,7 +24,7 @@ class UiController extends Controller
     }
  // Patient UI
 
- 
+
 //  Admin UI
     public function dashboard(){
         return view('adminUI.adminDashboard');
@@ -36,6 +36,26 @@ class UiController extends Controller
 
     public function staff(){
         return view('adminUI.staff');
+    }
+
+    public function service(){
+        return view('adminUI.service');
+    }
+
+    public function patient(){
+        return view('adminUI.patient');
+    }
+
+    public function appointment(){
+        return view('adminUI.appointment');
+    }
+
+    public function treatment_record(){
+        return view('adminUI.treatment_record');
+    }
+
+    public function supply(){
+        return view('adminUI.supply');
     }
 //  Admin UI
 }

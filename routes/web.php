@@ -15,5 +15,10 @@ Route::prefix('/')->name('adminUI.')->group(function () {
     Route::get('/dashboard', [UiController::class, 'dashboard'])->name('dashboard');
     Route::get('/dentist', [UiController::class, 'dentist'])->name('dentist');
     Route::get('/staff', [UiController::class, 'staff'])->name('staff');
+    Route::get('/service', [UiController::class, 'service'])->name('service');
+    Route::get('/patient', [UiController::class, 'patient'])->name('patient');
+    Route::get('/appointment', [UiController::class, 'appointment'])->name('appointment');
+    Route::get('/treatment', [UiController::class, 'treatment_record'])->name('treatment_record');
+    Route::get('/supply', [UiController::class, 'supply'])->name('supply');
 });
 

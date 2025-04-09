@@ -14,6 +14,7 @@
 
 
 @section('adminContent')
+{{--dre ang content ni sa dentist --}}
 <h1>dentist</h1>
 
 

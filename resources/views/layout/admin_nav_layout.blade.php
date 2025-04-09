@@ -40,23 +40,27 @@
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-card-list fs-5 me-2"></i>Services</a>
+            <a class="admin-btn" href="{{route('adminUI.service')}}"><i
+                  class="bi bi-card-list fs-5 me-2"></i>Services</a>
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-person-lines-fill fs-5 me-2"></i>Patients</a>
+            <a class="admin-btn" href="{{route('adminUI.patient')}}"><i
+                  class="bi bi-person-lines-fill fs-5 me-2"></i>Patients</a>
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-calendar-week fs-5 me-2"></i>Appointments</a>
+            <a class="admin-btn" href="{{route('adminUI.appointment')}}"><i
+                  class="bi bi-calendar-week fs-5 me-2"></i>Appointments</a>
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-clock-history fs-5 me-2"></i>Treatment Records</a>
+            <a class="admin-btn" href="{{route('adminUI.treatment_record')}}"><i
+                  class="bi bi-clock-history fs-5 me-2"></i>Treatment Records</a>
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-box-seam fs-5 me-2"></i>Supplies</a>
+            <a class="admin-btn" href="{{route('adminUI.supply')}}"><i class="bi bi-box-seam fs-5 me-2"></i>Supplies</a>
          </div>
 
          <div class="p-3">
