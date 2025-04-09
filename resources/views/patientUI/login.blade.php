@@ -43,7 +43,8 @@
 
                            </input>
 
-                           <p class="text-center mt-3">Don't have an account? <a href="#" class="text-info">Register</a>
+                           <p class="text-center mt-3">Don't have an account? <a href="{{route('patientUI.register')}}"
+                                 class="text-info">Register</a>
                            </p>
                         </form>
                      </div>

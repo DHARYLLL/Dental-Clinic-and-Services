@@ -65,7 +65,8 @@
                         class="btn log-reg w-100 p-2 rounded-pill fw-bold text-white">Register</button>
                   </div>
 
-                  <p class="text-center mt-3">Already have an account? <a href="#" class="text-info">Login</a></p>
+                  <p class="text-center mt-3">Already have an account? <a href="{{route('patientUI.login')}}"
+                        class="text-info">Login</a></p>
                </form>
 
             </div>

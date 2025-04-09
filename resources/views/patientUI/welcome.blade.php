@@ -19,8 +19,8 @@
             <li><a href="#section1" class="a-hover">Home</a></li>
             <li><a href="#section2" class="a-hover">About Us</a></li>
             <li><a href="#section3" class="a-hover">Services</a></li>
-            <li><a href="" class="a-hover">Sign in</a></li>
-            <li><a href="" class="a-hover">Sign up</a></li>
+            <li><a href="{{route('patientUI.login')}}" class="a-hover">Sign in</a></li>
+            <li><a href="{{route('patientUI.register')}}" class="a-hover">Sign up</a></li>
         </ul>
 
         <div class="d-flex align-items-center border w-100">
@@ -30,9 +30,11 @@
                 <li class="hideOnMobile"><a href="#section1" class="a-hover fw-semibold">Home</a></li>
                 <li class="hideOnMobile"><a href="#section2" class="a-hover fw-semibold">About Us</a></li>
                 <li class="hideOnMobile"><a href="#section3" class="a-hover fw-semibold">Services</a></li>
-                <li class="hideOnMobile"><a class="sign-in-btn text-white fw-semibold " href="">Sign in</a>
+                <li class="hideOnMobile"><a class="sign-in-btn text-white fw-semibold "
+                        href="{{route('patientUI.login')}}">Sign in</a>
                 </li>
-                <li class="hideOnMobile"><a class="sign-up-btn text-dark fw-semibold  " href="">Sign up</a>
+                <li class="hideOnMobile"><a class="sign-up-btn text-dark fw-semibold  "
+                        href="{{route('patientUI.register')}}">Sign up</a>
                 </li>
                 <li class="menu-btn" onclick=showSidebar()><a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
