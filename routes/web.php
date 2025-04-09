@@ -13,14 +13,14 @@ Route::prefix('/')->name('patientUI.')->group(function () {
 
 
 Route::prefix('/')->name('adminUI.')->group(function () {
-    Route::get('/dashboard', [UiController::class, 'dashboard'])->name('dashboard');
-    Route::get('/dentist', [UiController::class, 'dentist'])->name('dentist');
-    Route::get('/staff', [UiController::class, 'staff'])->name('staff');
-    Route::get('/service', [UiController::class, 'service'])->name('service');
-    Route::get('/patient', [UiController::class, 'patient'])->name('patient');
-    Route::get('/appointment', [UiController::class, 'appointment'])->name('appointment');
-    Route::get('/treatment', [UiController::class, 'treatment_record'])->name('treatment_record');
-    Route::get('/supply', [UiController::class, 'supply'])->name('supply');
+    Route::get('/admin/dashboard', [UiController::class, 'dashboard'])->name('dashboard');
+    Route::get('/admin/dentist', [UiController::class, 'dentist'])->name('dentist');
+    Route::get('/admin/staff', [UiController::class, 'staff'])->name('staff');
+    Route::get('/admin/service', [UiController::class, 'service'])->name('service');
+    Route::get('/admin/patient', [UiController::class, 'patient'])->name('patient');
+    Route::get('/admin/appointment', [UiController::class, 'appointment'])->name('appointment');
+    Route::get('/admin/treatment', [UiController::class, 'treatment_record'])->name('treatment_record');
+    Route::get('/admin/supply', [UiController::class, 'supply'])->name('supply');
 });
 
 
