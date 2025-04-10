@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Supply;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class SupplyController extends Controller
@@ -13,8 +12,8 @@ class SupplyController extends Controller
      */
     public function index()
     {
-        $supplies = supply::all();
-        return view('staffs.supply', ['supplies' => $supplies]);
+        $supplies = Supply::all();
+        return view('staffUI.supply', ['supplies' => $supplies]);
     }
 
     /**
@@ -37,7 +36,7 @@ class SupplyController extends Controller
         ]);
 
         $newSupply = Supply::create($data);
-        return redirect(route('staffs.supply'));
+        return redirect($request->input('redirect_to', route('staffUI.supply')));
     }
 
     /**
@@ -68,15 +67,15 @@ class SupplyController extends Controller
         ]);
 
         $supply->update($data);
-        return redirect(route('staffs.supply'));
+        return redirect($request->input('redirect_to', route('staffUI.supply')));
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Supply $supply)
+    public function destroy(Request $request, Supply $supply)
     {
         $supply->delete();
-        return redirect(route('staffs.supply'));
+        return redirect($request->input('redirect_to', route('staffUI.supply')));
     }
 }

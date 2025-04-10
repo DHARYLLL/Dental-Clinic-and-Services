@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Supply;
 use Illuminate\Http\Request;
 
 class UiController extends Controller
@@ -55,7 +55,19 @@ class UiController extends Controller
     }
 
     public function supply(){
-        return view('adminUI.supply');
+        $supplies = Supply::all();
+        return view('adminUI.supply', ['supplies' => $supplies]);
     }
 //  Admin UI
+
+// Staff UI
+public function staff_dashboard(){
+    return view('staffUI.staff_dashboard');
+   }
+
+   public function staff_supply(){
+       return view('staffUI.supply');
+      }
+
+// Staff UI
 }

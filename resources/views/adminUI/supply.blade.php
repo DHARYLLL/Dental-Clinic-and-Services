@@ -14,8 +14,6 @@
 
 
 @section('adminContent')
-{{--dre ang content ni sa Supplies --}}
-<h1>Supplies</h1>
-
+@include('layout.supply_crud',['supplies' => $supplies, 'redirect_route' => route('adminUI.supply')])
 
 @endsection
