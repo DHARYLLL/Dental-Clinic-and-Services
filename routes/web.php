@@ -37,7 +37,8 @@ Route::post('/staffs/supply', [SupplyController::class, 'store'])->name('staffs.
 Route::put('/supply/{supply}/update', [SupplyController::class, 'update'])->name('supply.update');
 Route::delete('/supply/{supply}/destroy', [SupplyController::class, 'destroy'])->name('supply.destroy');
 
-
+//staff crud
 Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store');
 Route::delete('/staff/{staff}/destroy', [StaffController::class, 'destroy'])->name('staff.destroy');
 Route::put('/staff/{staff}/update', [StaffController::class, 'update'])->name('staff.update');
+//staff crud
