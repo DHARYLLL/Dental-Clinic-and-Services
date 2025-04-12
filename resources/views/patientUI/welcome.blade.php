@@ -120,21 +120,7 @@
         <hr class="pb-4">
         <h1 style="color: #1e466b;" class="text-center pb-5">SERVICES</h1>
 
-        <div class="row row-cols-1 row-cols-md-3 p-3">
-            @foreach ($services as $service)
-            <div class="col text-center mb-4">
-                <div style="border: solid 1.5px #009fde" class="p-4 ms-3 rounded shadow-sm h-100 me-3">
-                    <h5 class="fw-bold mb-3">{{ $service->service_name }}</h5>
-
-                    <p>{{ $service->service_description }}</p>
-
-                    <button class="sign-in-btn text-white w-50 p-1 mt-3 border border-0">
-                        ₱{{ number_format($service->service_price) }}
-                    </button>
-                </div>
-            </div>
-            @endforeach
-        </div>
+        {{-- dire list sa services --}}
     </div>
     {{-- Services --}}
 </div>

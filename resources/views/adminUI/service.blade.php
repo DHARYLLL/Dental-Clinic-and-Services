@@ -15,9 +15,7 @@
 
 @section('adminContent')
 {{--dre ang content ni sa services --}}
-@include('layout.service_crud',[
-'services' => $services,
-'redirect_route' => route('adminUI.service')
-])
+<h1>Service</h1>
+
 
 @endsection

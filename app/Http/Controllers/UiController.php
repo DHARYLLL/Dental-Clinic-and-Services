@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Staff;
 use App\Models\Supply;
-use App\Models\Service;
-
 use Illuminate\Http\Request;
 
 class UiController extends Controller
@@ -27,8 +25,7 @@ class UiController extends Controller
     }
 
     public function welcome(){
-        $services = Service::all();
-        return view('patientUI.welcome', ['services' => $services]);
+        return view('patientUI.welcome');
     }
     // Patient UI
 
@@ -85,5 +82,9 @@ public function staff_dashboard(){
        return view('staffUI.supply');
       }
 
+<<<<<<< HEAD
     // Staff UI
+=======
+// Staff UI
+>>>>>>> parent of 69230df (service crud admin/staff)
 }
