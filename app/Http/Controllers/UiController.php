@@ -81,10 +81,4 @@ public function staff_dashboard(){
    public function staff_supply(){
        return view('staffUI.supply');
       }
-
-<<<<<<< HEAD
-    // Staff UI
-=======
-// Staff UI
->>>>>>> parent of 69230df (service crud admin/staff)
-}
+    }
