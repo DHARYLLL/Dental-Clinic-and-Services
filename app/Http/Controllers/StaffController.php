@@ -82,7 +82,6 @@ class StaffController extends Controller
             unset($data['password']);
         }
 
-
         $staff->update($data);
         return redirect(route('adminUI.staff'));
     }

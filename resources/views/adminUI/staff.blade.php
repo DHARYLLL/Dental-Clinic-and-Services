@@ -13,8 +13,6 @@
 @endsection
 
 @section('adminContent')
-{{--dre ang content ni sa staff --}}
-<h1>staff</h1>
 
 <style>
    .modal-dialog {
@@ -72,7 +70,7 @@
                         </div>
 
                         <div>
-                           <form action="{{route('staff.destroy', ['staff' => $staff])}}" method="POST">
+                           <form action="{{route('admin.staff.destroy', ['staff' => $staff])}}" method="POST">
                               @csrf
                               @method('delete')
                               <button class="btn btn-dark w-100 px-2 py-1"><i class="bi bi-trash-fill"></i></button>
@@ -95,7 +93,7 @@
                   </div>
 
                   <div class="modal-body mt-3">
-                     <form action="{{route('staff.update', ['staff' => $staff->id])}}" method="POST">
+                     <form action="{{route('admin.staff.update', ['staff' => $staff->id])}}" method="POST">
                         @csrf
                         @method('put')
                         <div class="row mb-3 gap-2">
@@ -173,7 +171,7 @@
          </div>
 
          <div class="modal-body mt-3">
-            <form action="{{route('staff.store')}}" method="POST">
+            <form action="{{route('admin.staff.store')}}" method="POST">
                @csrf
                @method('POST')
                <div class="row mb-3 gap-2">

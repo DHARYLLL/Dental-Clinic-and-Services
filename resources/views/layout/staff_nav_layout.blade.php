@@ -33,7 +33,8 @@
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-card-list fs-5 me-2"></i>Services</a>
+            <a class="admin-btn" href="{{route('staffUI.service')}}"><i
+                  class="bi bi-card-list fs-5 me-2"></i>Services</a>
          </div>
 
          <div class="p-3">

@@ -22,48 +22,48 @@
       </div>
    </div>
 
-   <div class="row">
+   <div style="min-height: 525px !important;" class="row">
       <div style="background-color: #1e466b !important;" class="col-2">
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.dashboard')}}"><i
                   class="bi bi-house-door fs-5 me-2"></i>Dashboard</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.dentist')}}"><i
                   class="bi bi-people-fill fs-5 me-2"></i>Dentists</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.staff')}}"> <i
                   class="bi bi-person-gear fs-5 me-2"></i>Staffs</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.service')}}"><i
                   class="bi bi-card-list fs-5 me-2"></i>Services</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.patient')}}"><i
                   class="bi bi-person-lines-fill fs-5 me-2"></i>Patients</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.appointment')}}"><i
                   class="bi bi-calendar-week fs-5 me-2"></i>Appointments</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.treatment_record')}}"><i
                   class="bi bi-clock-history fs-5 me-2"></i>Treatment Records</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href="{{route('adminUI.supply')}}"><i class="bi bi-box-seam fs-5 me-2"></i>Supplies</a>
          </div>
 
-         <div class="p-3">
+         <div class="pb-3 pt-2 px-2">
             <a class="admin-btn" href=""><i class="bi bi-arrow-return-left fs-5 me-2"></i>Logout</a>
          </div>
       </div>

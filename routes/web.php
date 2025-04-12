@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\SupplyController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UiController;
 use App\Models\Supply;
@@ -12,7 +13,6 @@ Route::prefix('/')->name('patientUI.')->group(function () {
     Route::get('/profile', [UiController::class, 'profile'])->name('profile');
     Route::get('/', [UiController::class, 'welcome'])->name('welcome');
 });
-
 
 Route::prefix('/')->name('adminUI.')->group(function () {
     Route::get('/admin/dashboard', [UiController::class, 'dashboard'])->name('dashboard');
@@ -25,6 +25,10 @@ Route::prefix('/')->name('adminUI.')->group(function () {
     Route::get('/admin/supply', [UiController::class, 'supply'])->name('supply');
 });
 
+Route::get('/staff/service', [ServiceController::class, 'index'])->name('staffUI.service');
+Route::post('/staffs/service', [ServiceController::class, 'store'])->name('staffs.service.store');
+Route::put('/service/{service}/update', [ServiceController::class, 'update'])->name('service.update');
+Route::delete('/service/{service}/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');
 
 // project supplies
 Route::prefix('/')->name('staffUI.')->group(function () {
@@ -37,9 +41,8 @@ Route::post('/staffs/supply', [SupplyController::class, 'store'])->name('staffs.
 Route::put('/supply/{supply}/update', [SupplyController::class, 'update'])->name('supply.update');
 Route::delete('/supply/{supply}/destroy', [SupplyController::class, 'destroy'])->name('supply.destroy');
 
-
-Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store');
-Route::delete('/staff/{staff}/destroy', [StaffController::class, 'destroy'])->name('staff.destroy');
-Route::put('/staff/{staff}/update', [StaffController::class, 'update'])->name('staff.update');
+Route::post('/admin/staff', [StaffController::class, 'store'])->name('admin.staff.store');
+Route::delete('/staff/{staff}/destroy', [StaffController::class, 'destroy'])->name('admin.staff.destroy');
+Route::put('/staff/{staff}/update', [StaffController::class, 'update'])->name('admin.staff.update');
 
 

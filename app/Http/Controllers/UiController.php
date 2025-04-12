@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Staff;
 use App\Models\Supply;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class UiController extends Controller
@@ -25,7 +26,8 @@ class UiController extends Controller
     }
 
     public function welcome(){
-        return view('patientUI.welcome');
+        $services = Service::all();
+        return view('patientUI.welcome', ['services' => $services]);
     }
     // Patient UI
 
@@ -48,7 +50,8 @@ class UiController extends Controller
     }
 
     public function service(){
-        return view('adminUI.service');
+        $services = Service::all();
+        return view('adminUI.service', ['services' => $services]);
     }
 
     public function patient()
@@ -81,4 +84,11 @@ public function staff_dashboard(){
    public function staff_supply(){
        return view('staffUI.supply');
       }
+
+      public function staff_service(){
+        $services = Service::all();
+        return view('staffUI.service', ['services' => $services]);
+       }
     }
+
+    
