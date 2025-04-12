@@ -103,31 +103,31 @@
                               <input style="background-color: #d9d9d9" type="text" id="fname" name="fname"
                                  class="form-control p-2" value="{{ $staff->fname }}">
                            </div>
-         
+
                            <div class="col">
                               <input style="background-color: #d9d9d9" type="text" id="lname" name="lname"
                                  class="form-control p-2" value="{{ $staff->lname }}">
                            </div>
                         </div>
-         
+
                         <div class="row mb-3 gap-2">
                            <div class="col">
                               <input style="background-color: #d9d9d9" type="email" id="email" name="email"
                                  class="form-control p-2" value="{{ $staff->email }}">
                            </div>
                         </div>
-         
+
                         <div class="row mb-3 gap-2">
                            <div class="col">
                               <input style="background-color: #d9d9d9" type="text" id="address" name="address"
                                  class="form-control p-2" value="{{ $staff->address }}">
                            </div>
                         </div>
-         
+
                         <div class="row mb-3 gap-2">
                            <div class="col">
-                              <input style="background-color: #d9d9d9" type="text" id="contact_number" name="contact_number"
-                                 class="form-control p-2" value="{{ $staff->contact_number }}">
+                              <input style="background-color: #d9d9d9" type="text" id="contact_number"
+                                 name="contact_number" class="form-control p-2" value="{{ $staff->contact_number }}">
                            </div>
                         </div>
 
@@ -137,7 +137,7 @@
                                  class="form-control p-2" value="Enter new passowrd (optional)">
                            </div>
                         </div>
-         
+
                         <div class="modal-footer row mt-3 gap-2 pt-3">
                            <div class="col">
                               <button class="btn btn-outline-info text-black fw-bold w-100 p-1" type="button"
@@ -191,8 +191,8 @@
 
                <div class="row mb-3 gap-2">
                   <div class="col">
-                     <input style="background-color: #d9d9d9" type="email" id="email" name="email"
-                        placeholder="Email" class="form-control p-2">
+                     <input style="background-color: #d9d9d9" type="email" id="email" name="email" placeholder="Email"
+                        class="form-control p-2">
                   </div>
                </div>
 
