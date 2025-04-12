@@ -36,7 +36,6 @@ Route::get('/staff/supply', [SupplyController::class, 'index'])->name('staffUI.s
 Route::post('/staffs/supply', [SupplyController::class, 'store'])->name('staffs.supply.store');
 Route::put('/supply/{supply}/update', [SupplyController::class, 'update'])->name('supply.update');
 Route::delete('/supply/{supply}/destroy', [SupplyController::class, 'destroy'])->name('supply.destroy');
-<<<<<<< HEAD
 
 
 Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store');
@@ -44,5 +43,3 @@ Route::delete('/staff/{staff}/destroy', [StaffController::class, 'destroy'])->na
 Route::put('/staff/{staff}/update', [StaffController::class, 'update'])->name('staff.update');
 
 
-=======
->>>>>>> parent of 69230df (service crud admin/staff)
