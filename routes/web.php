@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\StaffController;
 use App\Http\Controllers\SupplyController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UiController;
+use App\Models\Supply;
 
 Route::prefix('/')->name('patientUI.')->group(function () {
     Route::get('/login', [UiController::class, 'login'])->name('login');
@@ -24,7 +26,7 @@ Route::prefix('/')->name('adminUI.')->group(function () {
 });
 
 // project supplies
-Route::prefix('/')->name('staffUI.')->group(function (){
+Route::prefix('/')->name('staffUI.')->group(function () {
     Route::get('/staff/dashboard', [UiController::class, 'staff_dashboard'])->name('dashboard');
     Route::get('/staff/supply', [UiController::class, 'staff_supply'])->name('supply');
     Route::get('/staff/service', [UiController::class, 'staff_service'])->name('service');
@@ -39,3 +41,14 @@ Route::get('/staff/service', [ServiceController::class, 'index'])->name('staffUI
 Route::post('/staffs/service', [ServiceController::class, 'store'])->name('staffs.service.store');
 Route::put('/service/{service}/update', [ServiceController::class, 'update'])->name('service.update');
 Route::delete('/service/{service}/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');
+
+Route::get('/staff/service', [ServiceController::class, 'index'])->name('staffUI.service');
+Route::post('/staffs/service', [ServiceController::class, 'store'])->name('staffs.service.store');
+Route::put('/service/{service}/update', [ServiceController::class, 'update'])->name('service.update');
+Route::delete('/service/{service}/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');
+
+//staff crud
+Route::post('/admin/staff', [StaffController::class, 'store'])->name('staff.store');
+Route::delete('/staff/{staff}/destroy', [StaffController::class, 'destroy'])->name('staff.destroy');
+Route::put('/staff/{staff}/update', [StaffController::class, 'update'])->name('staff.update');
+//staff crud
