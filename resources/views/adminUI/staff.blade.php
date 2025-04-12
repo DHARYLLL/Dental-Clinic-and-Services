@@ -14,7 +14,7 @@
 
 @section('adminContent')
 {{--dre ang content ni sa staff --}}
-
+<h1>staff</h1>
 
 <style>
    .modal-dialog {
