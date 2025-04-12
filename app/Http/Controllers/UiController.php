@@ -51,7 +51,8 @@ class UiController extends Controller
     }
 
     public function service(){
-        return view('adminUI.service');
+        $services = Service::all();
+        return view('adminUI.service', ['services' => $services]);
     }
 
     public function patient()
@@ -76,14 +77,20 @@ class UiController extends Controller
     }
     //  Admin UI
 
-// Staff UI
-public function staff_dashboard(){
-    return view('staffUI.staff_dashboard');
-   }
 
-   public function staff_supply(){
-       return view('staffUI.supply');
+// Staff UI
+    public function staff_dashboard(){
+        return view('staffUI.staff_dashboard');
+    }
+
+    public function staff_supply()
+    {
+        return view('staffUI.supply');
       }
+
+      public function staff_service(){
+        return view('staffUI.service');
+     }
 
     // Staff UI
 }
