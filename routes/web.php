@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SupplyController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UiController;
 
@@ -10,7 +11,6 @@ Route::prefix('/')->name('patientUI.')->group(function () {
     Route::get('/profile', [UiController::class, 'profile'])->name('profile');
     Route::get('/', [UiController::class, 'welcome'])->name('welcome');
 });
-
 
 Route::prefix('/')->name('adminUI.')->group(function () {
     Route::get('/admin/dashboard', [UiController::class, 'dashboard'])->name('dashboard');
@@ -23,14 +23,19 @@ Route::prefix('/')->name('adminUI.')->group(function () {
     Route::get('/admin/supply', [UiController::class, 'supply'])->name('supply');
 });
 
-
 // project supplies
 Route::prefix('/')->name('staffUI.')->group(function (){
     Route::get('/staff/dashboard', [UiController::class, 'staff_dashboard'])->name('dashboard');
     Route::get('/staff/supply', [UiController::class, 'staff_supply'])->name('supply');
+    Route::get('/staff/service', [UiController::class, 'staff_service'])->name('service');
 });
 
 Route::get('/staff/supply', [SupplyController::class, 'index'])->name('staffUI.supply');
 Route::post('/staffs/supply', [SupplyController::class, 'store'])->name('staffs.supply.store');
 Route::put('/supply/{supply}/update', [SupplyController::class, 'update'])->name('supply.update');
 Route::delete('/supply/{supply}/destroy', [SupplyController::class, 'destroy'])->name('supply.destroy');
+
+Route::get('/staff/service', [ServiceController::class, 'index'])->name('staffUI.service');
+Route::post('/staffs/service', [ServiceController::class, 'store'])->name('staffs.service.store');
+Route::put('/service/{service}/update', [ServiceController::class, 'update'])->name('service.update');
+Route::delete('/service/{service}/destroy', [ServiceController::class, 'destroy'])->name('service.destroy');

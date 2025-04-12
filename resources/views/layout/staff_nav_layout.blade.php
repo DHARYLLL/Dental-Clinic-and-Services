@@ -2,6 +2,7 @@
 @section('title', 'Staff Dashboard')
 
 @section('content')
+
 <div class="container-fluid vh-100">
    <div class="row border border-start-0 border-end-0 border-top-0 border-2 ">
       <div class="col col-2  d-flex justify-content-center">
@@ -21,7 +22,7 @@
       </div>
    </div>
 
-   <div class="row">
+   <div style="min-height: 525px !important;" class="row">
       <div style="background-color: #1e466b !important;" class="col-2">
          <div class="p-3">
             <a class="admin-btn" href="{{route('staffUI.dashboard')}}"><i
@@ -33,7 +34,8 @@
          </div>
 
          <div class="p-3">
-            <a class="admin-btn" href=""><i class="bi bi-card-list fs-5 me-2"></i>Services</a>
+            <a class="admin-btn" href="{{route('staffUI.service')}}"><i
+                  class="bi bi-card-list fs-5 me-2"></i>Services</a>
          </div>
 
          <div class="p-3">

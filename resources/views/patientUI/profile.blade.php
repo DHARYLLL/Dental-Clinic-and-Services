@@ -2,6 +2,17 @@
 @section('title', 'Profile')
 
 @section('content')
+<style>
+   .modal-dialog {
+      margin: auto !important;
+   }
+
+   .modal,
+   .modal-dialog,
+   .modal-content {
+      padding: 15px !important;
+   }
+</style>
 
 <div class="container-fluid vh-100">
    <div class="row h-100">
@@ -23,7 +34,8 @@
          </div>
 
          <div class="d-flex justify-content-start mx-3">
-            <button class="btn text-white fw-semibold mt-3"><i class="bi bi-calendar-event me-2 fs-5"></i>Book an
+            <button type="button" class="btn text-white fw-semibold mt-3" data-bs-toggle="modal"
+               data-bs-target="#appointmentModal"><i class="bi bi-calendar-event me-2 fs-5"></i>Book an
                appointment</button>
          </div>
 
@@ -76,4 +88,25 @@
    </div>
 </div>
 
+
+
+<!-- Modal for appointment -->
+<div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header d-flex justify-content-between">
+            <h1 class="modal-title fs-5" id="appointmentModalLabel">Appointment Form</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <form action="">
+
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-primary w-100">Submit Appointment</button>
+         </div>
+      </div>
+   </div>
+</div>
 @endsection
